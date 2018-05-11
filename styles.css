@@ -1,0 +1,176 @@
+
+
+
+/* PRIMARY CSS (FOR MOBILE SCREEN SIZE) */
+
+/* responsive typography */
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+body{
+	background-color: beige;
+	color: #363334;
+	overflow-x: hidden;
+}
+
+/* main container for whole page */
+.grid-container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 10vh 80vh 5vh;
+	grid-row-gap: 5vh;
+}
+/* rows (header and body) */
+.grid-item {
+	border: 1px solid white;
+	box-shadow: 0 0 2rem white;
+	padding: 5px;
+}
+
+/* header part of grid */
+.header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+/* TITLE inside of header */
+.header > span {
+	position: absolute;
+	align-self: flex-start;
+	width: 100%;
+	text-align: center;
+	font-size: 2.3rem;
+	font-weight: bold;
+}
+/* NAV ITEMS inside of header */
+.flex-item-header {
+	border-top: 1px solid #363334;
+	border-left: 1px solid #363334;
+	border-right: 1px solid #363334;
+	border-radius: 1rem 1rem 0 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	max-height: 30%;
+	transition: background;
+	transition-duration: 0.7s;
+}
+.flex-item-header:hover {
+	background-color: #62c3ff;
+	cursor: pointer;
+}
+
+/* body part of grid */
+.body {
+	max-height: 80vh;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+}
+/* each item within the body */
+.flex-item-body {
+	margin-bottom: 3%;
+}
+/* styling for individual items */
+/*icons*/
+img {
+	float: left;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	width: 15%;
+	transition: width 1s ease-in-out;
+}
+/*bios*/
+.flex-item-body > p {
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*header that links to streamers twitch page*/
+.flex-item-body > a {
+	font-size: 1.3rem;
+	color: white;
+	text-decoration: none;
+}
+.flex-item-body > a:hover {
+	text-decoration: underline;
+}
+
+
+/* online/offline classes for user info (show stream info) */
+.online {
+	background-color: #48ff79;
+}
+
+.offline {
+	background-color: #d1d1cc;
+}
+
+/*img preview on online class*/
+.preview {
+	float: right;
+	margin-right: 0px;
+	width: 100%;
+}
+
+
+/*footer*/
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border: none;
+	font-size: 0.5rem;
+	text-align: center;
+	box-shadow: none;
+}
+.footer > a {
+	text-decoration: none;
+}
+
+/*==========================================================================*/
+/* MEDIUM SCREEN BREAKPOINT */
+@media only screen and (min-width: 641px){
+	/* just need to change how big the preview img gets */
+	.preview {
+		max-width: 75%;
+		margin-bottom: 0;
+	}
+}
+
+/*===========================================================================*/
+
+/* LARGE SCREEN BREAKPOINT */
+@media only screen and (min-width: 1008px){
+	/*change header to be a bit bigger/font size */
+	html {
+		font-size: 1.25rem;
+	}
+	/*CHANGE LAYOUT*/
+
+	/* main container for whole page */
+	.grid-container {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 15vh 75vh;
+		grid-row-gap: 5vh;
+	}
+
+	/* body part of grid */
+	.body {
+		max-height: 75vh;
+		overflow-y: scroll;
+		display: flex;
+		flex-direction: column;
+		width: 75%;
+		margin-left: 12.5%;
+	}
+	/* each item within the body */
+	.flex-item-body {
+		margin-bottom: 1%;
+}
+}
