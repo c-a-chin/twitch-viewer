@@ -60,17 +60,14 @@ function displayStreamerInfo(i = 0){
 
 			// add on hover listener to display extra info
 			$(`#item-${i}`).mouseenter(function(){
-				$(this).find("img").css("width", "20%");
+				$(this).find(".preview").css("width", "20%");
 				$(this).find("p").toggle();
 				$(this).find(".preview").show();
 				$(this).find(".preview").css("width", "100%");
 			})
 			$(`#item-${i}`).mouseleave(function(){
-				$(this).find("img").css("width", "15%");
 				$(this).find("p").toggle();
 				$(this).find(".preview").css("width", "0%");
-
-				
 			})
 
 			// keep running until all streamers are displayed
